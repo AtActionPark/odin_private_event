@@ -1,0 +1,15 @@
+<div class="container">
+ <h1> Upcoming events </h1>
+  <% @upcoming_events.each do |e| %>
+    <ul>
+      <li> <%= link_to e.name, e %> </li>
+    </ul>
+  <% end %>
+
+  <h1> Past events </h1>
+  <% @past_events.each do |e| %>
+    <ul>
+      <li> <%= link_to e.name, e %></li>
+    </ul>
+  <% end %>
+</div>

@@ -1,0 +1,27 @@
+<div class="eventcontainer">
+  <h1> Organised Events: </h1>
+  <% if @user && @user.events.any? %>
+    <% @user.events.each do |e| %>
+      <ul>
+        <li><%= link_to e.name, e %> </li>
+      </ul>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="eventcontainer">
+  <h1> Attended Events: </h1>
+  <h2> Upcoming : </h1>
+  <% @upcoming_events.each do |e| %>
+      <ul>
+        <li><%= link_to e.name, e %> </li>
+      </ul>
+    <% end %>
+
+    <h2> Past : </h1>
+    <% @prev_events.each do |e| %>
+      <ul>
+        <li><%= link_to e.name, e %> </li>
+      </ul>
+    <% end %>
+</div>

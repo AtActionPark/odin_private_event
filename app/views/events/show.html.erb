@@ -1,0 +1,11 @@
+<p><%= "Organisator : #{User.find(@event.user_id).name}" %></p>
+<p><%= "Location : #{@event.location}" %></p>
+<p><%= "Date : #{@event.date.to_date}" %></p>
+
+<p>Attendees : </p>
+<ul>
+  <% @event.attendees.each do |a| %>
+    <li><%= a.name %> </li>
+  <% end %>
+</ul>
+
